@@ -1,0 +1,40 @@
+{% extends 'layout.html' %}
+<!-- should be where the submissions from form are going -->
+{% block title %}{% endblock %}
+
+
+{% block content %}
+
+  <div class="container">
+
+    <h1>Showing puppies</h1>
+
+    <div class="alert alert-success" role="alert">
+      <p>{{success}}</p>
+    </div>
+    <ul>
+    </ul>
+  </div>
+<!--bootstrap -->
+  <div class="bs-example" data-example-id="striped-table">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Puppy Name</th>
+          <th>Puppy ID</th>
+        </tr>
+      </thead>
+      <tbody>
+<!-- puppies is the key and puppy is the iterator -->
+<!-- % logic tags have % -->
+       {% for puppy in puppies %}
+        <tr>
+          <td>{{puppy.name}}</td>
+          <td>{{puppy.id}}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+{% endblock %}
