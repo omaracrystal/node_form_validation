@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+
+{% block title %}{% endblock %}
+
+
+{% block content %}
+
+  <div class="container">
+
+  {% for error in errors %}
+    <p>{{ error }}</p>
+  {% endfor %}
+
+    <form action= "/submit_people" method="post">
+      <div class="form-group">
+        <label for="personName">Person Name</label>
+        <input type="text" class="form-control" id="person-name" name= "personName" placeholder="Person Name">
+      </div>
+
+      <div class="form-group">
+        <label for="person-id">Person ID</label>
+        <input type="text" class="form-control" id="person-id" name= "personID" placeholder="Person ID">
+      </div>
+
+      </div>
+      <button type="submit" class="btn btn-default">Add person</button>
+  </form>
+
+  </div>
+
+{% endblock %}

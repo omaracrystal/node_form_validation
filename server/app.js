@@ -11,7 +11,6 @@ var swig = require('swig');
 // *** routes *** //
 var routes = require('./routes/index.js');
 
-
 // *** express instance *** //
 var app = express();
 

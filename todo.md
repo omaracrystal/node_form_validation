@@ -1,5 +1,12 @@
 #Node Express Form Validations
 
+##Set up
+1. mkdir name
+2. cd name
+3. yo galvanize-express
+4. npm install
+5. nodemon
+
 Aim for routes and views
 5 parts to routes> index.js
   1. var express = require('express');
